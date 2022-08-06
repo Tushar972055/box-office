@@ -3,8 +3,14 @@ import {Switch, Route} from 'react-router-dom'
 
 function App() {
   return <Switch>
-    <Route path="/">
+    <Route exact path="/">
     This is home page
+    </Route>
+    <Route exact path="/starred">
+    This is starred page
+    </Route>
+    <Route>
+      This is 404 not found page.
     </Route>
   </Switch>;
 }
