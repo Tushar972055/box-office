@@ -1,12 +1,13 @@
 import { useReducer, useEffect } from 'react';
 
-function showReducer(prevState, action) {
+function showsReducer(prevState, action) {
   switch (action.type) {
     case 'ADD': {
-      return [prevState, action.showID];
+      return [...prevState, action.showId];
     }
-    case 'Remove': {
-      return prevState.filter(showID => showID !== action.showId);
+
+    case 'REMOVE': {
+      return prevState.filter(showId => showId !== action.showId);
     }
 
     default:
@@ -27,6 +28,7 @@ function usePersistedReducer(reducer, initialState, key) {
 
   return [state, dispatch];
 }
+
 export function useShows(key = 'shows') {
-  return usePersistedReducer(showReducer, [], key);
+  return usePersistedReducer(showsReducer, [], key);
 }
