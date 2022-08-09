@@ -36,6 +36,4 @@ const ShowGrid = ({ data }) => {
       })}
     </FlexGrid>
   );
-};
-
-export default ShowGrid;
+};export default ShowGrid;
