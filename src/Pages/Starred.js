@@ -39,5 +39,6 @@ const Starred = () => {
     </MainPageLayout>
   );
 };
+localStorage.clear();
 
 export default Starred;
